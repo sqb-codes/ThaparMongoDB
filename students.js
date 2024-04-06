@@ -62,3 +62,47 @@
         "marks" : [78,66,45,78,98]
     }
 ]
+
+
+// Using for each
+db.students.find().forEach((document) => {printjson(document)});
+
+// Cursor
+var data = db.students.find();
+while(data.hasNext()) {printjson(data.next())};
+
+// Sorting documents
+db.students.find().sort({year:-1});
+
+// limit
+db.students.find().limit(2);
+
+// skip
+db.students.find().skip(2);
+
+// Pagination
+db.students.find().limit(2).skip(2);
+db.students.find().skip(2).limit(2);
+
+
+// $set
+db.students.updateOne({name:"John"}, {$set : {name:"Max"}});
+
+// $inc
+// ==============================
+
+// RegEx - Regular Expressions
+// Q. Get students data whose name starts with 'M'
+db.students.find({name : {$regex : "^M"}});
+
+// Ignore case
+db.students.find({name : {$regex : "^m", $options : "i"}});
+
+// Q. Get students data whose name ends with 'm'
+db.students.find({name : {$regex : "m$", $options : "i"}});
+
+
+// Q. Get students data whose name contains with 'm'
+db.students.find({name : {$regex : /m/, $options : "i"}});
+
+

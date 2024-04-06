@@ -23,3 +23,24 @@ db.sales.find({
         $gt : ["$sale", "$target"]
     }
 });
+
+
+// Q. If sales are greater than 150, subtract sales by 20 else return sales as it is
+db.sales.find({
+    $expr : {
+        $gt : [
+            {$cond : {
+                if: {
+                    $gt: ["$sale", 150]
+                },
+                then: {
+                    $subtract: ["$sale", 20]
+                },
+                else: "$sale"
+            }}, "$target"
+        ]
+    }
+});
+
+
+
