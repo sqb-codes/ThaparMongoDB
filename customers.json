@@ -1,6 +1,6 @@
 [
     {
-        "c_id" : "c_101",
+        "c_id" : 101,
         "name" : "John",
         "phone" : 8989889989,
         "details" : {
@@ -9,7 +9,7 @@
         }
     },
     {
-        "id" : "c_102",
+        "c_id" : 102,
         "name" : "Mac",
         "phone" : 8985589989,
         "details" : {
