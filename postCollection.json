@@ -1,0 +1,47 @@
+// post
+[
+    {
+        "title" : "My First Post",
+        "author" : "Tom",
+        "likes" : 5
+    },
+    {
+        "title" : "My Second Post",
+        "author" : "Tom",
+        "likes" : 2
+    },
+    {
+        "title" : "My Third Post",
+        "author" : "John",
+        "likes" : 3
+    },
+]
+
+// comments
+[
+    {
+        "postTitle" : "My First Post",
+        "comment" : "nice post",
+        "likes" : 3
+    },
+    {
+        "postTitle" : "My Second Post",
+        "comment" : "Great post",
+        "likes" : 0
+    },
+    {
+        "postTitle" : "My First Post",
+        "comment" : "not so good",
+        "likes" : 1
+    },
+    {
+        "postTitle" : "My Third Post",
+        "comment" : "liked this post",
+        "likes" : 10
+    },
+    {
+        "postTitle" : "My New Post",
+        "comment" : null,
+        "likes" : 0
+    },
+]
