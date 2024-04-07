@@ -1,0 +1,166 @@
+https://github.com/sqb-codes/ThaparMongoDB
+
+
+db.createCollection(name, options)
+
+Options
+- capped - True/False
+- size - max size in bytes
+- max - maximum documents allowed
+- AutoIndexedId - automatically create index on ID Field
+
+- storageEngine (mongo db uses WiredTiger)
+- validator
+- validationLevel
+- validationAction
+- pipeline
+- viewOn
+- collation
+- writeConcern
+- indexOption
+
+=====================================
+
+Traverse Documents
+Cursor
+
+=====================================
+
+Update Operations
+
+=====================================
+
+Array Operations
+- $ / $[]
+- $push
+- $addToSet
+- $pop
+- $pull
+- $pullAll
+- $slice
+- $each
+- $position
+
+=====================================
+
+RegEx - Regular Expressions
+
+=====================================
+
+Schema Validation
+
+=====================================
+
+Import JSON data
+
+
+mongoimport "D:/persons.json" -d persons_db -c persons --jsonArray --drop
+
+=====================================
+
+Aggregate Pipelines
+
+- $project
+- $match
+- $group
+- $sort
+- $skip
+- $limit
+- $bucket
+
+Working on Dates
+
+- If your data is stored as a string in BSON format and you want to convert it into a data
+
+Working with Arrays using Aggregation
+- $unwind - deconstruct array
+- $slice
+- $filter
+- $bucket
+
+
+Syntax of $filter
+{
+    $filter : {
+        input : <array>,
+        cond : <expression>,
+        as : <string>,		// optional - name of variable that will contain output
+        limit : <number>	// optional - limit the number of outcomes
+    }
+}
+
+
+Syntax of $bucket
+{
+    $bucket : {
+	groupBy : "$key",
+	boundaries : [10,20],
+	output : {output_name : operations like $sum/$avg}
+    }
+}
+
+
+=====================================
+
+$lookup - alternative of joins
+{
+    $lookup : {
+	from : collection to join,
+	localField : input field to join / primary key,
+	foreignField : field of another collection to join,
+	as : output array field
+    }
+}
+
+
+
+Join Conditions and Subqueries
+- Executing a pipeline on a joined collection
+- Correlated and Uncorrelated Sub queries
+
+{
+    $lookup : {
+	from : <joined collection>,
+	let : {expression...},
+	pipeline : [pipeline to run on joined collection],
+	as : <output array field>
+    }
+}
+
+
+=====================================
+
+Map Reduce (deprecated... alternative is aggregate)
+
+=====================================
+
+Indexing
+- by default mongo performs COLLSCAN - Collection Scan (Scan each document)
+- we will apply indexing to enhance query execution
+- we have to perform IXSCAN - Index Scan
+- by default each document has a index that is _id
+- Internally indexing used B-Tree data structure
+
+
+Types of Indexes available in MongoDB
+- Single Field
+- Compound Index
+- Multikey Index
+- Text Index
+- Clustered Index
+- Hashed Index
+
+
+Compund Index - combine multiple fields for compound indexing
+
+MultiKey Index - when we index a field that holds an array value then MongoDB automatically creates a separate index of each value present in array
+
+Clustered Index - specify the order in which clustered collections store data.
+Collections created with a clustered index are known as clustered collections.
+
+
+
+
+
+
+
