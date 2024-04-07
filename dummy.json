@@ -1,0 +1,61 @@
+[
+    {
+        "_id" : 1,
+        "item" : "Books",
+        "price" : 20,
+        "ordered" : 2
+    },
+    {
+        "_id" : 2,
+        "item" : "Shoes",
+        "price" : 30,
+        "ordered" : 1
+    },
+    {
+        "_id" : 3,
+        "item" : "Cookies",
+        "price" : 15,
+        "ordered" : 40
+    }
+]
+
+
+[
+    {
+        "_id" : 1,
+        "stock" : "Books",
+        "warehouse" : "A",
+        "qtyInStock" : 100
+    },
+    {
+        "_id" : 2,
+        "stock" : "Shoes",
+        "warehouse" : "A",
+        "qtyInStock" : 80
+    },
+    {
+        "_id" : 3,
+        "stock" : "Bottles",
+        "warehouse" : "B",
+        "qtyInStock" : 60
+    },
+    {
+        "_id" : 4,
+        "stock" : "Watch",
+        "warehouse" : "B",
+        "qtyInStock" : 60
+    },
+    {
+        "_id" : 5,
+        "stock" : "Cookies",
+        "warehouse" : "A",
+        "qtyInStock" : 80
+    },
+]
+
+
+
+
+
+
+
