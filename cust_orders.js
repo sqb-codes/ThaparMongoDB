@@ -23,6 +23,8 @@ var reduceFunc = function(keyCustId, valuePrices) {
 
 db.cust_orders.mapReduce(mapFunc, reduceFunc, {out : "map_reduce_output"});
 
+
+
 db.cust_orders.aggregate([
     {
         $group : {
