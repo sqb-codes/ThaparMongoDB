@@ -85,6 +85,13 @@ db.students.find().limit(2).skip(2);
 db.students.find().skip(2).limit(2);
 
 
+
+
+
+
+
+
+
 // $set
 db.students.updateOne({name:"John"}, {$set : {name:"Max"}});
 
