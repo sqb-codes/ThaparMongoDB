@@ -25,6 +25,10 @@ db.sales.find({
 });
 
 
+
+
+
+
 // Q. If sales are greater than 150, subtract sales by 20 else return sales as it is
 db.sales.find({
     $expr : {
